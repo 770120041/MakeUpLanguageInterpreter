@@ -1,0 +1,28 @@
+package com.zheliu.mua.Function.BuildIn;
+
+import com.zheliu.mua.Exception.MuaException;
+import com.zheliu.mua.Exception.RuntimeMuaException;
+import com.zheliu.mua.Function.BuiltInFunc;
+import com.zheliu.mua.Context;
+import com.zheliu.mua.Variable.MuaLiteral;
+import com.zheliu.mua.Variable.MuaVariable;
+
+/**
+ * Created by zcy on 27/09/2017.
+ */
+public class Thing extends BuiltInFunc {
+
+    private static Class[] argTypes = {MuaLiteral.class};
+
+    public Class[] getArgTypes() {
+        return argTypes;
+    }
+
+    public MuaVariable run(Context ctx, MuaVariable[] args) throws MuaException {
+        MuaVariable value = ctx.getSymbolTable().getSymbol(((MuaLiteral) args[0]).getValue());
+        if( value == null ) throw new RuntimeMuaException("`" + ((MuaLiteral) args[0]).getValue() + "` is undefined .");
+        return value;
+    }
+
+}
+
