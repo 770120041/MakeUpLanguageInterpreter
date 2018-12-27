@@ -1,7 +1,7 @@
 package com.zheliu.mua.Exception;
 
 
-public class MuaException extends Throwable{
+public class MuaException extends Exception{
     String message;
 
     public MuaException(String message) {
