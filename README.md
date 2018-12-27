@@ -290,6 +290,6 @@ func
 print isname "a // => true
 ```
 
-#Miscellaneous
+# Miscellaneous
 1. Mua language is created by course Instructor Weng Kai in Zhejiang University for his course "Programming Language Principles"'
 2. This README is referenced from TsReaper and this implementation in under the framework of zurl.
