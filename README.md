@@ -1,4 +1,4 @@
-# Mua Interpreter
+# About
 
  It's an interpreter for the functional programming language Mua written with Java.
 
